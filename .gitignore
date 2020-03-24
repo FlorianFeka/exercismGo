@@ -2,6 +2,13 @@
 # Created by https://www.gitignore.io/api/go,linux,windows,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=go,linux,windows,visualstudiocode
 
+### Exercism ###
+# gitignore template for Exercism project
+# website: https://exercism.io/
+
+# Ignore .exercism folder which contain sensitive data
+.exercism
+
 ### Go ###
 # Binaries for programs and plugins
 *.exe
