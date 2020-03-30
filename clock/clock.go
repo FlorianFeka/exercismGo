@@ -76,13 +76,24 @@ func getHoursAndMinutes(hours, minutes int) (int, int) {
 		minutes = minutes - (additionalHours * 60)
 		hours = hours + additionalHours
 	}
+	if minutes < 0 {
+		if minutes <= -60 {
+			minutes = minutes
+		}
+	}
 	if hours >= 24 {
 		hours = hours - ((hours / 24) * 24)
+	}
+	if hours < 0 {
+		if hours <= -24 {
+			hours = hours - ((hours / 24) * 24)
+		}
+		hours = 24 + hours
 	}
 	return hours, minutes
 }
 
 func main() {
-	clock := New(8, 0)
+	clock := New(-91, 0)
 	fmt.Println(clock.String())
 }
